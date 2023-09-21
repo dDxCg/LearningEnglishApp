@@ -1,19 +1,25 @@
+import java.sql.Array;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
 public class Dictionary {
     private int count;
-    private Word[] wordArray;
+    private List<Word> wordArray;
 
     /**
      * Constructor 1.
      */
     public Dictionary() {
         count = 0;
-        wordArray = new Word[50];
+        wordArray = new ArrayList<>();
     }
 
     /**
      * Constructor 2.
      */
-    public Dictionary(Word[] wordArray, int count) {
+    public Dictionary(List<Word> wordArray, int count) {
         this.wordArray = wordArray;
         this.count = count;
     }
@@ -22,7 +28,7 @@ public class Dictionary {
      * setter wordArray.
      * @param wordArray thiết lập mảng word.
      */
-    public void setWordArray(Word[] wordArray) {
+    public void setWordArray(List<Word> wordArray) {
         this.wordArray = wordArray;
     }
 
@@ -30,7 +36,7 @@ public class Dictionary {
      * getter wordArray.
      * @return trả về mảng word.
      */
-    public Word[] getWordArray() {
+    public List<Word> getWordArray() {
         return this.wordArray;
     }
 
@@ -53,7 +59,7 @@ public class Dictionary {
      */
     public void addWord(Word newWord) {
         if (count < 50) {
-            wordArray[count] = newWord;
+            wordArray.add(newWord);
             count++;
         }
     }
@@ -70,7 +76,7 @@ public class Dictionary {
 
         for (int i = 0; i < count && !isAppear; i++) {
             // nếu xuất hiện thì lưu vị trí lại.
-            if (wordArray[i].getWord_target().equals(word)) {
+            if (wordArray.get(i).getWord_target().equals(word)) {
                 position = i;
                 isAppear = true;
             }
@@ -78,13 +84,20 @@ public class Dictionary {
 
         // đẩy từ word ra khỏi mảng.
         if (isAppear) {
-            for (int i = position; i < count; i++) {
-                wordArray[i] = wordArray[i + 1];
-            }
+            wordArray.remove(position);
 
             // giảm số lượng từ.
             count--;
         }
+    }
+
+    public void sortWords() {
+        Collections.sort(wordArray, new Comparator<Word>() {
+            @Override
+            public int compare(Word o1, Word o2) {
+                return o1.getWord_target().compareTo(o2.getWord_target());
+            }
+        });
     }
 //
 //    /**

@@ -12,12 +12,15 @@ public class DictionaryCommandline {
      * show từ điển.
      */
     public static void showAllWords(Dictionary dictionary) {
+        // sap xep.
+        dictionary.sortWords();
+
         // tạo form bảng từ.
         System.out.println("No" + String.format("%7s", " | ") + "English" + String.format("%5s", " | ") + "Vietnamese");
 
         // in ra các từ theo form.
         for (int i = 0; i < dictionary.getCount(); i++) {
-            System.out.println((i + 1) + String.format("%7s", " | ") + dictionary.getWordArray()[i].getWord_target() + String.format("%5s", " | ") + dictionary.getWordArray()[i].getWord_explain());
+            System.out.println((i + 1) + String.format("%7s", " | ") + dictionary.getWordArray().get(i).getWord_target() + String.format("%5s", " | ") + dictionary.getWordArray().get(i).getWord_explain());
         }
     }
 
