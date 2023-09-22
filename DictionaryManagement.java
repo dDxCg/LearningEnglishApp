@@ -1,3 +1,6 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Scanner;
 public class DictionaryManagement {
 
@@ -41,5 +44,29 @@ public class DictionaryManagement {
 
         // giải phóng scanner.
         insertWord.close();
+    }
+
+    public void importFromFile(Dictionary dictionary) throws IOException {
+        FileReader fileReader = new FileReader("Dictionary.txt");
+        BufferedReader bufferedReader = new BufferedReader(fileReader);
+
+
+        String line = bufferedReader.readLine();
+        while (line != null) {
+            int position = -1;
+            for (int i = 0; i < line.length(); i++) {
+                if ((int) line.charAt(i) == 9) {
+                    position = i + 1;
+                    break;
+                }
+            }
+            String word_target = line.substring(0, position);
+            String word_explain = line.substring(position);
+            Word newWord = new Word(word_target, word_explain);
+            dictionary.addWord(newWord);
+            line = bufferedReader.readLine();
+        }
+        fileReader.close();
+        bufferedReader.close();
     }
 }

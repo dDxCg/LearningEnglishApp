@@ -1,4 +1,3 @@
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -58,10 +57,8 @@ public class Dictionary {
      * thêm từ mới.
      */
     public void addWord(Word newWord) {
-        if (count < 50) {
-            wordArray.add(newWord);
-            count++;
-        }
+        wordArray.add(newWord);
+        count++;
     }
 
     /**
@@ -98,6 +95,7 @@ public class Dictionary {
                 return o1.getWord_target().compareTo(o2.getWord_target());
             }
         });
+
     }
 //
 //    /**

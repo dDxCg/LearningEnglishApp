@@ -1,3 +1,5 @@
+import java.io.IOException;
+
 public class DictionaryCommandline {
 
     /**
@@ -29,12 +31,14 @@ public class DictionaryCommandline {
      * Chức năng: thêm từ, in ra từ điển.
      * @param dictionary đối tượng của class Dictionary.
      */
-    public void dictionaryBasic(Dictionary dictionary) {
+    public void dictionaryBasic(Dictionary dictionary) throws IOException {
         // tạo đối tượng class DictionaryManagement.
         DictionaryManagement call = new DictionaryManagement();
 
         // gọi hàm thêm từ bằng commandline.
-        call.insertFromComandline(dictionary);
+        //call.insertFromComandline(dictionary);
+
+        call.importFromFile(dictionary);
 
         // in ra từ điển hiện tại.
         DictionaryCommandline.showAllWords(dictionary);
