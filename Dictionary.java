@@ -97,14 +97,4 @@ public class Dictionary {
         });
 
     }
-//
-//    /**
-//     * test.
-//     */
-//    public void print() {
-//        System.out.println(count);
-//        for (int i = 0; i < count; i++) {
-//            System.out.println(wordArray[i].getWord_target() + " " + wordArray[i].getWord_explain());
-//        }
-//    }
 }
