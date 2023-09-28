@@ -100,9 +100,10 @@ public class DictionaryCommandline {
                 case 3 -> dictionaryManagement.updateWord(dictionary);
                 case 4 -> showAllWords(dictionary);
                 case 5 -> dictionaryManagement.dictionaryLookup(dictionary);
-                case 6, 7, 9 -> System.out.println("Feature is not Available.");
+                case 7, 9 -> System.out.println("Feature is not Available.");
                 case 8 -> dictionary = dictionaryManagement.importFromFile(dictionary);
                 //case 9 -> dictionaryManagement.exportToFile(dictionary);
+                case 6 -> dictionaryManagement.dictionarySearcher(dictionary);
             }
             if (request == 0) {
                 System.out.println("Quiting...");

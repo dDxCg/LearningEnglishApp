@@ -77,6 +77,8 @@ public class DictionaryManagement {
             line = bufferedReader.readLine();
         }
 
+        System.out.println("Successfully importing dictionary from file.");
+
         // giải phóng.
         fileReader.close();
         bufferedReader.close();
@@ -109,6 +111,20 @@ public class DictionaryManagement {
             System.out.println("Nghĩa của từ: " + dictionary.getWordArray().get(position).getWord_explain());
         } else {
             System.out.println("Từ bạn đã tìm không xuất hiện trong từ điển.");
+        }
+    }
+
+    public void dictionarySearcher(Dictionary dictionary) {
+        Scanner input = new Scanner(System.in);
+        String s = input.nextLine();
+        s = s.toLowerCase();
+        System.out.println("Result words which start with " + s + " are:");
+        for (int i = 0; i < dictionary.getCount(); i++) {
+            if (dictionary.getWordArray().get(i).getWord_target().startsWith(s)) {
+                String word_target = dictionary.getWordArray().get(i).getWord_target();
+                String word_explain = dictionary.getWordArray().get(i).getWord_explain();
+                System.out.println(word_target + " - " + word_explain);
+            }
         }
     }
 
