@@ -1,0 +1,264 @@
+a	một
+about	về
+act	hành động
+add	thêm
+after	sau
+again	lại
+against	chống lại
+air	không khí
+all	tất cả
+also	cũng
+always	luôn luôn
+am	là
+an	một
+and	và
+animal	động vật
+any	bất kỳ
+are	là
+around	xung quanh
+as	như
+ask	hỏi
+at	tại
+away	ra
+back	trở lại
+be	là
+because	bởi vì
+been	đã
+before	trước
+being	đang
+below	dưới
+best	tốt nhất
+better	tốt hơn
+between	giữa
+big	lớn
+black	đen
+blue	xanh da trời
+both	cả hai
+boy	cậu bé
+bring	mang
+but	nhưng
+by	bởi
+call	gọi
+came	đến
+can	có thể
+car	xe hơi
+change	thay đổi
+children	trẻ em
+city	thành phố
+close	đóng
+come	đến
+could	có thể
+country	quốc gia
+cut	cắt
+day	ngày
+did	làm
+do	làm
+does	làm
+dog	chó
+down	xuống
+each	mỗi
+eat	ăn
+end	kết thúc
+even	thậm chí
+every	mỗi
+eye	mắt
+face	mặt
+family	gia đình
+far	xa
+father	cha
+feel	cảm thấy
+few	ít
+find	tìm
+first	đầu tiên
+follow	theo
+food	thức ăn
+for	cho
+form	hình thức
+found	tìm thấy
+four	bốn
+from	từ
+get	được
+girl	cô gái
+give	cho
+go	đi
+good	tốt
+got	được
+great	tuyệt vời
+green	xanh lá cây
+group	nhóm
+had	có
+hand	tay
+has	có
+have	có
+he	anh ấy
+head	đầu
+help	giúp
+her	cô ấy
+here	ở đây
+high	cao
+him	anh ấy
+his	của anh ấy
+home	nhà
+house	nhà
+how	làm thế nào
+I	tôi
+if	nếu
+in	trong
+into	vào
+is	là
+it	nó
+its	của nó
+just	chỉ
+keep	giữ
+kind	loại
+know	biết
+large	lớn
+last	cuối cùng
+late	trễ
+learn	học
+left	trái
+let	cho phép
+letter	thư
+life	cuộc sống
+light	ánh sáng
+like	như
+line	dòng
+little	nhỏ
+live	sống
+long	dài
+look	nhìn
+made	làm
+make	làm
+man	người đàn ông
+many	nhiều
+may	có thể
+me	tôi
+mean	có nghĩa là
+men	đàn ông
+might	có thể
+mile	dặm
+more	hơn
+most	nhiều nhất
+mother	mẹ
+move	di chuyển
+much	nhiều
+must	phải
+my	của tôi
+name	tên
+near	gần
+need	cần
+never	không bao giờ
+new	mới
+next	kế tiếp
+night	đêm
+no	không
+not	không
+now	bây giờ
+number	số
+of	của
+off	tắt
+old	cũ
+on	trên
+one	một
+only	chỉ
+open	mở
+or	hoặc
+other	khác
+our	của chúng tôi
+out	ra
+over	trên
+own	của riêng
+page	trang
+paper	giấy
+part	một phần
+people	người
+place	nơi
+play	chơi
+point	điểm
+put	đặt
+question	câu hỏi
+read	đọc
+red	đỏ
+right	phải
+run	chạy
+said	nói
+same	như nhau
+saw	nhìn thấy
+say	nói
+school	trường học
+see	nhìn
+seem	có vẻ
+she	cô ấy
+should	nên
+show	chương trình
+small	nhỏ
+so	vì vậy
+some	một số
+something	cái gì đó
+sound	âm thanh
+start	bắt đầu
+state	tiểu bang
+still	vẫn
+stop	dừng lại
+story	câu chuyện
+study	học
+such	như vậy
+take	lấy
+talk	nói chuyện
+tell	nói
+than	hơn
+that	đó
+the	các
+them	họ
+then	sau đó
+there	đó
+these	những
+they	họ
+thing	điều
+think	nghĩ
+this	này
+those	những
+thought	nghĩ
+three	ba
+through	qua
+time	thời gian
+to	đến
+together	cùng nhau
+too	quá
+took	lấy
+town	thị trấn
+two	hai
+under	dưới
+until	cho đến khi
+up	lên
+us	chúng tôi
+use	sử dụng
+very	rất
+want	muốn
+was	là
+water	nước
+way	cách
+we	chúng tôi
+well	tốt
+went	đi
+were	là
+what	những gì
+when	khi nào
+where	ở đâu
+which	nào
+white	trắng
+who	ai
+why	tại sao
+will	sẽ
+with	với
+word	từ
+work	công việc
+world	thế giới
+would	sẽ
+write	viết
+year	năm
+yes	có
+yet	chưa
+you	bạn
+young	trẻ
+your	của bạn

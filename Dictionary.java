@@ -1,4 +1,4 @@
-import java.sql.Array;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -7,6 +7,8 @@ import java.util.List;
 public class Dictionary {
     private int count;
     private List<Word> wordArray;
+
+    public static final String DICT_PATH = "Dictionary.txt";
 
     /**
      * Constructor 1.
@@ -23,6 +25,16 @@ public class Dictionary {
         this.wordArray = wordArray;
         this.count = count;
     }
+
+    /**
+     * constructor file input.
+     */
+    public Dictionary(String filePath) throws IOException {
+        Reader flManage = new Reader(filePath);
+        wordArray = new ArrayList<>();
+        wordArray = flManage.listInput();
+    }
+
 
     /**
      * setter wordArray.
@@ -92,21 +104,53 @@ public class Dictionary {
     }
 
     public void sortWords() {
-        Collections.sort(wordArray, new Comparator<Word>() {
+        wordArray.sort(new Comparator<Word>() {
             @Override
             public int compare(Word o1, Word o2) {
                 return o1.getWord_target().compareTo(o2.getWord_target());
             }
         });
     }
-//
-//    /**
-//     * test.
-//     */
-//    public void print() {
-//        System.out.println(count);
-//        for (int i = 0; i < count; i++) {
-//            System.out.println(wordArray[i].getWord_target() + " " + wordArray[i].getWord_explain());
-//        }
-//    }
+
+    /**
+     * test show all words and defs.
+     */
+    public void showAll() {
+        String head1 = "No.";
+        String head2 = "Word";
+        String head3 = "Def";
+        int firstBlank = 15;
+        int secondBlank = 40;
+        System.out.print(head1);
+        for (int i = 0; i < firstBlank - head1.length(); ++i) {
+            System.out.print(" ");
+        }
+        System.out.print("| " + head2);
+        for (int i = 0; i < secondBlank - head2.length(); ++i) {
+            System.out.print(" ");
+        }
+        System.out.print("| " + head3 + "\n");
+        for (int i = 0; i < wordArray.size(); ++i) {
+            String index = String.valueOf(i+1);
+            System.out.print(index);
+            for (int j = 0; j < firstBlank - index.length(); ++j) {
+                System.out.print(" ");
+            }
+            String word = wordArray.get(i).getWord_target();
+            String def = wordArray.get(i).getWord_explain();
+            System.out.print("| " + word);
+            for (int j = 0; j < secondBlank - word.length(); ++j) {
+                System.out.print(" ");
+            }
+            System.out.print("| " + def + "\n");
+        }
+    }
+
+    void export(String outPath) throws IOException {
+        Writer writer = new Writer(outPath);
+        for (int i = 0; i < wordArray.size(); ++i) {
+            writer.writeWord(wordArray.get(i));
+        }
+        writer.close();
+    }
 }

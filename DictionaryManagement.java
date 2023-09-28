@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.Scanner;
 public class DictionaryManagement {
 
@@ -12,7 +13,7 @@ public class DictionaryManagement {
     /**
      * thêm từ vào từ điển (bao gồm cả từ và nghĩa).
      */
-    public void insertFromComandline(Dictionary dictionary) {
+    public void insertFromComandline(Dictionary dictionary) throws IOException {
         Dictionary dic = new Dictionary();
         Scanner insertWord = new Scanner(System.in);
 
