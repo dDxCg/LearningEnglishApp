@@ -1,0 +1,3 @@
+drop	danh roi
+hello	xin chao
+zebra	ngua van
