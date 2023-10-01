@@ -1,10 +1,7 @@
-import java.io.File;
-import java.io.IOException;
-
 public class Main {
-    public static void main(String[] args) throws IOException {
-        Dictionary dict = new Dictionary(Dictionary.DICT_PATH);
-        dict.showAll();
-        dict.export("sampleOut.txt");
+    public static void main(String[] args) {
+        Dictionary dictionary = new Dictionary();
+        DictionaryCommandline d = new DictionaryCommandline();
+        d.dictionaryBasic(dictionary);
     }
 }
