@@ -46,7 +46,7 @@ public class Dictionary {
     public int iSInDictionary(String word) {
         //todo:
         for (int i = 0; i < wordArray.size(); ++i) {
-            if (wordArray.get(i).getWord_target() == word) {
+            if (Objects.equals(wordArray.get(i).getWord_target(), word)) {
                 return i;
             }
         }
