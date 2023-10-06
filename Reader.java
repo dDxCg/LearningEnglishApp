@@ -9,6 +9,10 @@ public class Reader {
         reader = new BufferedReader(new FileReader(fileIn));
     }
 
+    public BufferedReader getReader() {
+        return this.reader;
+    }
+
     public List<Word> listInput() throws IOException {
         List<Word> output = new ArrayList<>();
         String data = "";

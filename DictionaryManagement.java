@@ -128,29 +128,6 @@ public class DictionaryManagement {
         }
     }
 
-    //bug
-    /**
-     * thêm từ vào trong file từ điển.
-     */
-    /*public void exportToFile(Dictionary dictionary) throws IOException {
-        Dictionary dictionary1 = importFromFile(dictionary);
-        Scanner input = new Scanner(System.in);
-        File file = new File("Dictionary.txt");
-        FileWriter fileWriter = new FileWriter(file, true);
-        for (int i = 0; i < dictionary.getCount(); i++) {
-            String word_target = dictionary.getWordArray().get(i).getWord_target();
-            String word_explain = dictionary.getWordArray().get(i).getWord_explain();
-            String word = word_target + (char) 9 + word_explain;
-            if (dictionaryLookup(dictionary1, word_target) == -1) {
-                fileWriter.write("\n" + word);
-            } else {
-                System.out.println("Từ này đã có trong từ điển.");
-            }
-        }
-
-        fileWriter.close();
-    }*/
-
     /**
      * thêm từ mới.
      */

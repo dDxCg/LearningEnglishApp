@@ -43,7 +43,7 @@ public class Dictionary {
     /**
      *if word is in dictionary return index else return -1.
      */
-    public int iSInDictionary(String word) {
+    public int isInDictionary(String word) {
         //todo:
         for (int i = 0; i < wordArray.size(); ++i) {
             if (Objects.equals(wordArray.get(i).getWord_target(), word)) {
@@ -57,7 +57,7 @@ public class Dictionary {
      * thêm từ mới.
      */
     public void addWord(Word newWord) {
-        if (iSInDictionary(newWord.getWord_target()) == -1) {
+        if (isInDictionary(newWord.getWord_target()) == -1) {
             wordArray.add(newWord);
         }
     }
@@ -66,8 +66,8 @@ public class Dictionary {
      * xoá từ.
      */
     public void deleteWord(String word) {
-        if (iSInDictionary(word) != -1) {
-            wordArray.remove(iSInDictionary(word));
+        if (isInDictionary(word) != -1) {
+            wordArray.remove(isInDictionary(word));
         } else {
             System.out.println("The word is not in the dictionary.");
         }

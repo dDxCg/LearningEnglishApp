@@ -19,11 +19,11 @@ public class DictionaryCommandline {
         dictionary.sortWords();
 
         // tạo form bảng từ.
-        System.out.println("No" + String.format("%7s", " | ") + "English" + String.format("%5s", " | ") + "Vietnamese");
+        System.out.printf("%-5s%-15s%-15s%n", "No", "English", "Vietnamese");
 
         // in ra các từ theo form.
         for (int i = 0; i < dictionary.getCount(); i++) {
-            System.out.println((i + 1) + String.format("%7s", " | ") + dictionary.getWordArray().get(i).getWord_target() + String.format("%5s", " | ") + dictionary.getWordArray().get(i).getWord_explain());
+            System.out.printf("%-5s%-15s%-15s%n", i + 1, dictionary.getWordArray().get(i).getWord_target(), dictionary.getWordArray().get(i).getWord_explain());
         }
     }
 
@@ -70,7 +70,7 @@ public class DictionaryCommandline {
      */
     public void dictionaryAdvanced(Dictionary dictionary, DictionaryManagement dictionaryManagement) throws IOException {
         System.out.println("Welcome to our application!");
-        System.out.println("Features: [6], [7], [9] are not available, stay cool and wait for a newer version.");
+        System.out.println("Features: [9] is not available, stay cool and wait for a newer version.");
         System.out.println("English Learning Application v1.0.0");
         System.out.println("Produced by D.D.Dung, D.D.Cuong, N.V.Ban.");
         System.out.println("Course: OOP - UET - K67 - CA - CLC2 - 2023.");
@@ -100,10 +100,15 @@ public class DictionaryCommandline {
                 case 3 -> dictionaryManagement.updateWord(dictionary);
                 case 4 -> showAllWords(dictionary);
                 case 5 -> dictionaryManagement.dictionaryLookup(dictionary);
-                case 7, 9 -> System.out.println("Feature is not Available.");
-                case 8 -> dictionary = dictionaryManagement.importFromFile(dictionary);
-                //case 9 -> dictionaryManagement.exportToFile(dictionary);
                 case 6 -> dictionaryManagement.dictionarySearcher(dictionary);
+                case 7 -> {
+                    QuestionManager questionManager = new QuestionManager();
+                    questionManager.importQuestions("Question.txt");
+                    GameLauncher gameLauncher = new GameLauncher();
+                    gameLauncher.menu(questionManager);
+                }
+                case 8 -> dictionary = dictionaryManagement.importFromFile(dictionary);
+                case 9 -> System.out.println("Feature is not Available.");
             }
             if (request == 0) {
                 System.out.println("Quiting...");
