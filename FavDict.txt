@@ -1,3 +1,4 @@
 drop	danh roi
 hello	xin chao
+hi	xin chao
 zebra	ngua van
