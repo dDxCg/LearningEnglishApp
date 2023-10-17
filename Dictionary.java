@@ -1,7 +1,6 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.io.IOException;
+import java.sql.Array;
+import java.util.*;
 
 public class Dictionary {
     private int count;
@@ -11,16 +10,14 @@ public class Dictionary {
      * Constructor 1.
      */
     public Dictionary() {
-        count = 0;
         wordArray = new ArrayList<>();
     }
 
     /**
      * Constructor 2.
      */
-    public Dictionary(List<Word> wordArray, int count) {
+    public Dictionary(List<Word> wordArray) {
         this.wordArray = wordArray;
-        this.count = count;
     }
 
     /**
@@ -29,6 +26,10 @@ public class Dictionary {
      */
     public void setWordArray(List<Word> wordArray) {
         this.wordArray = wordArray;
+    }
+
+    public int getCount() {
+        return wordArray.size();
     }
 
     /**
@@ -40,61 +41,58 @@ public class Dictionary {
     }
 
     /**
-     * get count.
+     *if word is in dictionary return index else return -1.
      */
-    public int getCount() {
-        return this.count;
-    }
-
-    /**
-     * set count.
-     */
-    public void setCount(int count) {
-        this.count = count;
+    public int isInDictionary(String word) {
+        //todo:
+        for (int i = 0; i < wordArray.size(); ++i) {
+            if (Objects.equals(wordArray.get(i).getWord_target(), word)) {
+                return i;
+            }
+        }
+        return -1;
     }
 
     /**
      * thêm từ mới.
      */
     public void addWord(Word newWord) {
-        wordArray.add(newWord);
-        count++;
+        if (isInDictionary(newWord.getWord_target()) == -1) {
+            wordArray.add(newWord);
+        }
     }
 
     /**
      * xoá từ.
      */
     public void deleteWord(String word) {
-        // lấy vị trí từ cần xoá.
-        int position = -1;
-
-        // xét xem từ word có xuất hiện hay không.
-        boolean isAppear = false;
-
-        for (int i = 0; i < count && !isAppear; i++) {
-            // nếu xuất hiện thì lưu vị trí lại.
-            if (wordArray.get(i).getWord_target().equals(word)) {
-                position = i;
-                isAppear = true;
-            }
-        }
-
-        // đẩy từ word ra khỏi mảng.
-        if (isAppear) {
-            wordArray.remove(position);
-
-            // giảm số lượng từ.
-            count--;
+        if (isInDictionary(word) != -1) {
+            wordArray.remove(isInDictionary(word));
+        } else {
+            System.out.println("The word is not in the dictionary.");
         }
     }
 
     public void sortWords() {
-        Collections.sort(wordArray, new Comparator<Word>() {
+        wordArray.sort(new Comparator<Word>() {
             @Override
             public int compare(Word o1, Word o2) {
                 return o1.getWord_target().compareTo(o2.getWord_target());
             }
         });
+    }
 
+    public void FileImport (String path) throws IOException {
+        Reader reader = new Reader(path);
+        wordArray = reader.listInput();
+    }
+
+    /**
+     * test.
+     */
+    public void print() {
+        for (Word word : wordArray) {
+            System.out.println(word.getWord_target() + " " + word.getWord_explain());
+        }
     }
 }

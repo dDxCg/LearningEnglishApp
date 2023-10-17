@@ -1,18 +1,12 @@
+import java.text.DecimalFormat;
+
 public class Game {
     private int score;
-    private String process;
-    private int numberOfQuestion;
+    private boolean answer;
 
     public Game() {
         score = 0;
-        process = "0%";
-        numberOfQuestion = 0;
-    }
-
-    public Game(int score, String process, int numberOfQuestion) {
-        this.score = score;
-        this.process = process;
-        this.numberOfQuestion = numberOfQuestion;
+        answer = false;
     }
 
     public int getScore() {
@@ -23,19 +17,59 @@ public class Game {
         this.score = score;
     }
 
-    public String getProcess() {
-        return process;
+    public boolean isAnswer() {
+        return answer;
     }
 
-    public void setProcess(String process) {
-        this.process = process;
+    public void setAnswer(boolean answer) {
+        this.answer = answer;
     }
 
-    public int getNumberOfQuestion() {
-        return numberOfQuestion;
-    }
-
-    public void setNumberOfQuestion(int numberOfQuestion) {
-        this.numberOfQuestion = numberOfQuestion;
+    public void printStatus(boolean ans, int mode, int current) {
+        double numberOfQuestion = 0;
+        double p = 0;
+        double deP = 0;
+        if (mode == 1) {
+            numberOfQuestion = 10;
+            p = 10;
+            deP = 3;
+            if (ans) {
+                score += p;
+            } else {
+                if (score - deP <= 0) {
+                    score = 0;
+                } else {
+                    score -= deP;
+                }
+            }
+        } else if (mode == 2) {
+            numberOfQuestion = 20;
+            p = 5;
+            deP = 2;
+            if (ans) {
+                score += p;
+            } else {
+                if (score - deP <= 0) {
+                    score = 0;
+                } else {
+                    score -= deP;
+                }
+            }
+        } else {
+            numberOfQuestion = 40;
+            p = 2.5;
+            deP = 1.5;
+            if (ans) {
+                score += p;
+            } else {
+                if (score - deP <= 0) {
+                    score = 0;
+                } else {
+                    score -= deP;
+                }
+            }
+        }
+        DecimalFormat decimalFormat = new DecimalFormat("00.00");
+        System.out.println("Score: " + score + ".\nProgress: " + decimalFormat.format((current / numberOfQuestion) * 100) + "%.\nQuestions left: " + (int) (numberOfQuestion - current));
     }
 }

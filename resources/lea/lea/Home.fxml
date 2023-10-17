@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lea.lea.ApplicationController">
+  <children>
+    <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ebdcc6;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <top>
+        <AnchorPane prefHeight="50.0" prefWidth="800.0" style="-fx-background-color: #d9d9d9;" BorderPane.alignment="CENTER">
+          <children>
+            <Label fx:id="Menu" layoutX="10.0" layoutY="7.0" text="Menu" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0">
+              <font>
+                <Font name="System Bold" size="25.0" />
+              </font>
+              <graphic>
+                <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                  <viewport>
+                    <Rectangle2D />
+                  </viewport>
+                  <image>
+                    <Image url="@Texture/menu.png" />
+                  </image>
+                </ImageView>
+              </graphic>
+            </Label>
+            <Label fx:id="MenuBack" layoutX="21.0" layoutY="7.0" text="Menu" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0">
+              <font>
+                <Font name="System Bold" size="25.0" />
+              </font>
+              <graphic>
+                <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                  <viewport>
+                    <Rectangle2D />
+                  </viewport>
+                  <image>
+                    <Image url="@Texture/menu.png" />
+                  </image>
+                </ImageView>
+              </graphic>
+            </Label>
+          </children></AnchorPane>
+      </top>
+      <left>
+        <AnchorPane fx:id="slider" nodeOrientation="LEFT_TO_RIGHT" prefHeight="400.0" prefWidth="170.0" style="-fx-background-color: #003380;" BorderPane.alignment="CENTER">
+          <cursor>
+            <Cursor fx:constant="DEFAULT" />
+          </cursor>
+          <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+              <children>
+                <JFXButton nodeOrientation="LEFT_TO_RIGHT" onAction="#homeButton" opacity="0.9" prefHeight="50.0" text="Home" textFill="WHITE" textOverrun="CLIP">
+                  <font>
+                    <Font name="System Bold" size="20.0" />
+                  </font>
+                  <graphic>
+                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                      <viewport>
+                        <Rectangle2D />
+                      </viewport>
+                      <image>
+                        <Image url="@Texture/home.png" />
+                      </image>
+                    </ImageView>
+                  </graphic>
+                </JFXButton>
+                <JFXButton nodeOrientation="LEFT_TO_RIGHT" onAction="#dictionaryButton" opacity="0.9" prefHeight="50.0" text="Dictionary" textFill="WHITE">
+                  <font>
+                    <Font name="System Bold" size="20.0" />
+                  </font>
+                  <graphic>
+                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                      <viewport>
+                        <Rectangle2D />
+                      </viewport>
+                      <image>
+                        <Image url="@Texture/dictionary.png" />
+                      </image>
+                    </ImageView>
+                  </graphic>
+                </JFXButton>
+                <JFXButton nodeOrientation="LEFT_TO_RIGHT" onAction="#practiceButton" opacity="0.9" prefHeight="50.0" text="Practice" textFill="WHITE">
+                  <font>
+                    <Font name="System Bold" size="20.0" />
+                  </font>
+                  <graphic>
+                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                      <viewport>
+                        <Rectangle2D />
+                      </viewport>
+                      <image>
+                        <Image url="@Texture/study.png" />
+                      </image>
+                    </ImageView>
+                  </graphic>
+                </JFXButton>
+                <JFXButton nodeOrientation="LEFT_TO_RIGHT" onAction="#profileButton" opacity="0.9" prefHeight="50.0" text="Profile" textFill="WHITE">
+                  <font>
+                    <Font name="System Bold" size="20.0" />
+                  </font>
+                  <graphic>
+                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                      <viewport>
+                        <Rectangle2D />
+                      </viewport>
+                      <image>
+                        <Image url="@Texture/profile.png" />
+                      </image>
+                    </ImageView>
+                  </graphic>
+                </JFXButton>
+                <JFXButton nodeOrientation="LEFT_TO_RIGHT" onAction="#helpButton" opacity="0.9" prefHeight="50.0" text="Help" textFill="WHITE">
+                  <font>
+                    <Font name="System Bold" size="20.0" />
+                  </font>
+                  <graphic>
+                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                      <viewport>
+                        <Rectangle2D />
+                      </viewport>
+                      <image>
+                        <Image url="@Texture/question.png" />
+                      </image>
+                    </ImageView>
+                  </graphic>
+                </JFXButton>
+              </children>
+            </VBox>
+          </children>
+        </AnchorPane>
+      </left>
+         <center>
+            <AnchorPane fx:id="mainPain" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </center>
+    </BorderPane>
+  </children>
+</AnchorPane>

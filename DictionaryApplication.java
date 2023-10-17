@@ -1,0 +1,2 @@
+public class DictionaryApplication {
+}
